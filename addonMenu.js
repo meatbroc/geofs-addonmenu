@@ -155,7 +155,7 @@
         **/
         addInput(prefId, defaultValue, description, type = "text", level = 0, options = "") {
             AddonMenu.addPreference(prefId, defaultValue, type);
-            const inp = $(`<input type="${type}" data-gespref="${geofs.preferences.aMenu[prefId]}">`);
+            const inp = $(`<input type="${type}" data-gespref="geofs.preferences.aMenu.${prefId}">`);
             inp.attr(options);
             this.$element.append(`<span style="text-indent: ${level}rem">${description}</span>`, inp, '<br>');
             return this;
